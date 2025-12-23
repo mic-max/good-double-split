@@ -1,0 +1,72 @@
+<!doctype html>
+<head>
+    <title>Best Double Cuts</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
+    <link rel="icon" href="favicon.png">
+</head>
+
+<body>
+    <h1>Best Double Cuts</h1>
+    <div>
+        <p>This is a visualizer webpage for the <a href="https://leetcode.com/problems/ways-to-split-array-into-three-subarrays">Leetcode problem</a>. To increase the fun I will refer to the subarrays left as <span class="redTeam">Red</span> and the right as <span class="blueTeam">Blue</span>.</p>
+        <p>A default input is provided but replace it from the text input field to use your own. When you change the <span class="redTeam">Red</span> and <span class="blueTeam">Blue</span> counters you are modifying how many elements will belong to each of their subarrays. The middle array is shown in an off-white shade. At least 1 number must be of each colour which the input enforces.</p>
+        <p>You will be shown the array in table form with the number along with it's index. These of course, also colour coded. Along with that are the sums of each color and whether the two conditions are independently passing with flying colours.</p>
+    </div>
+    <hr>
+    <div>
+        <!-- TODO: add an error indicator -->
+        <label for="arrayInput">Enter 3+ non-negative comma-separated integers</label>
+        <input id="arrayInput" type="text" value="1,2,3,4,5,6,7,8,9" placeholder="e.g., 1,2,3,4">
+    </div>
+
+    <div>
+        <label class="redTeam" for="red">Red</label>
+        <input id="red" type="number" min="1" value="1">
+        <label class="blueTeam" for="blue">Blue</label>
+        <input id="blue" type="number" min="1" value="1">
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+
+    <div>
+        <label class="redTeam" for="redSum">Red Σ</label>
+        <input type="number" id="redSum" readonly>
+        <p id="redWhiteCondition"><=</p>
+        <label for="whiteSum">White Σ</label>
+        <input type="number" id="whiteSum" readonly>
+        <p id="whiteBlueCondition"><=</p>
+        <label class="blueTeam" for="blueSum">Blue Σ</label>
+        <input type="number" id="blueSum" readonly>
+    </div>
+
+    <div>
+        <button id="computeButton">Compute</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Reds</th>
+                <th>Blues</th>
+            </tr>
+        </thead>
+        <tbody id="tbodyResults">
+
+        </tbody>
+    </table>
+
+    <style id="dynamicStyles"></style>
+    <script src="index.js"></script>
+</body>
+</html>

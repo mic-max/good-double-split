@@ -1,0 +1,15 @@
+.redTeam {
+    color: #E74856;
+}
+
+.blueTeam {
+    color: #0078D7;
+}
+
+table {
+    width: auto !important;
+}
+
+#arrayInput {
+    width: 100%;
+}

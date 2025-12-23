@@ -1,4 +1,5 @@
+# Split Array Into 3 Subarrays
 
-
-TODO
-1. make this hosted on https://jsfiddle.net/ for an easy link
+## Usage
+1. `python main.py`
+1. Open `index.html`
